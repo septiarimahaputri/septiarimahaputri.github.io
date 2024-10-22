@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design Example</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      /* Container for layout */
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header Section */
+      header {
+        background-color: #0056b3;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      /* Navigation */
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 20px 0;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Main content */
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      main .card {
+        flex: 1 1 calc(33.33% - 40px);
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      main .card h2 {
+        font-size: 1.5em;
+        color: #0056b3;
+      }
+
+      main .card p {
+        margin: 10px 0;
+      }
+
+      /* Footer Section */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+      @media only screen and (max-width: 768px) {
+        .container main {
+          flex-direction: column;
+        }
+      }
+      @media ony screen and (max-width: 480px) {
+        header h1 {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Design Example</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <main>
+        <div class="card">
+          <h2>Card 1</h2>
+          <p>
+            This is some content for card 1. The layout adapts as the screen
+            size changes.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Card 2</h2>
+          <p>
+            This is some content for card 2. It will stack on smaller screens.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Card 3</h2>
+          <p>
+            This is some content for card 3. Flexbox helps create this layout.
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Responsive Design Tutorial</p>
+    </footer>
+  </body>
+</html>
